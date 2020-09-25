@@ -9,7 +9,7 @@
     
   </script>
     
-<model-viewer src="model/ryu10geo.glb" poster="model/makit.jpg" shadow-intensity="0.5" ar ar-scale="fixed" camera-controls alt="A 3D model carousel" style="width:100%;height:100%;"  >
+<model-viewer src="rakkasei_1"  shadow-intensity="0.5" ar ar-scale="fixed" camera-controls alt="A 3D model carousel" style="width:100%;height:100%;"  >
   
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -21,7 +21,7 @@
 
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'makit')"style="text-align:center;"><font size="3">上層巻斗</font>
+      <button class="slide selected" onclick="switchSrc(this, 'rakkasei_1')"style="text-align:center;"><font size="3">落花生1全体</font>
       </button>  
       <button class="slide" onclick="switchSrc(this, 'tajmahal')" style="background-image: url('img/taj-mahal.png');">
       </button>
@@ -43,7 +43,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "model/" + name;
+    const base = name;
     modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.jpg';
     const slides = document.querySelectorAll(".slide");
